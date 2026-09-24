@@ -1,0 +1,6 @@
+title: Local AI Workbench
+description: Documentation and tutorials for the local-first LLM workbench powered by FastAPI and Ollama.
+theme: jekyll-theme-cayman
+
+github:
+  is_project_page: true
