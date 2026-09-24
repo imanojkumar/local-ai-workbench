@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Install and run Local AI Workbench.">
+  <meta name="theme-color" content="#0a0d14">
+  <title>Getting Started · Local AI Workbench</title>
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+  <div class="noise"></div>
+  
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Local AI Workbench home">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<rect x="1" y="1" width="26" height="26" rx="8" fill="url(#g)" stroke="rgba(255,255,255,.18)"/>
+<path d="M8.2 18.2V9.8h3.2l2.6 4.2 2.6-4.2h3.2v8.4h-2.7v-4.4L14 18.6l-3.1-4.8v4.4H8.2Z" fill="white"/>
+<defs><linearGradient id="g" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6D7CFF"/><stop offset="1" stop-color="#00C7A5"/></linearGradient></defs>
+</svg>
+    <span>Local AI Workbench</span><span class="version">v1.1</span>
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <a class="active" href="getting-started.html">Docs</a>
+    <a class="" href="architecture.html">Architecture</a>
+    <a href="https://github.com/imanojkumar/local-ai-workbench" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+    <span class="theme-icon">◐</span>
+  </button>
+  <button class="menu-toggle" type="button" aria-label="Open navigation">☰</button>
+</header>
+  <div class="docs-layout">
+    
+<aside class="sidebar">
+  <div class="side-group">
+    <div class="side-label">Documentation</div>
+    <a class="side-link active" href="getting-started.html">Getting Started</a>
+<a class="side-link " href="using-chat.html">Using Chat</a>
+<a class="side-link " href="model-library.html">Model Library</a>
+<a class="side-link " href="architecture.html">Architecture</a>
+<a class="side-link " href="development.html">Development</a>
+<a class="side-link " href="limitations.html">Limitations</a>
+  </div>
+  <div class="side-card">
+    <div class="eyebrow">LOCAL-FIRST</div>
+    <strong>Run models on your machine.</strong>
+    <p>Vanilla JS → FastAPI → Ollama</p>
+  </div>
+</aside>
+    <main class="doc-main">
+      <div class="doc-wrap">
+        
+<div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Getting Started</span></div>
+<header class="doc-hero"><span class="eyebrow">GUIDE 01</span><h1>Getting Started</h1><p>From a clean Windows machine to your first local model conversation.</p></header>
+<div class="doc-meta"><span>Estimated setup: 10–20 min</span><span>V1.1</span></div>
+<section class="doc-section"><h2>Prerequisites</h2><p>Install these components before launching the workbench.</p>
+<div class="check-grid"><div>Windows 10/11</div><div>Python 3.10+</div><div>Ollama</div><div>Modern browser</div><div>Git</div><div>VS Code</div></div></section>
+<section class="doc-section"><h2>1. Verify Ollama</h2><p>Open Command Prompt or PowerShell and confirm the runtime is available.</p>
+<pre><code>ollama --version
+ollama list</code></pre>
+<div class="callout note"><strong>Good to know</strong><p>An empty <code>ollama list</code> is valid. It only means no model has been installed yet.</p></div></section>
+<section class="doc-section"><h2>2. Start Local AI Workbench</h2><p>From the project folder, launch:</p><pre><code>run.bat</code></pre><p>Then open <code>http://127.0.0.1:8000</code>. The launcher normally opens it automatically.</p></section>
+<section class="doc-section"><h2>3. Validate the first run</h2>
+<ol class="steps"><li><span>01</span><div><strong>WebUI loads</strong><p>The application shell should render without browser errors.</p></div></li><li><span>02</span><div><strong>Ollama connected</strong><p>The status indicator should confirm the local runtime is reachable.</p></div></li><li><span>03</span><div><strong>Model selector is ready</strong><p>Installed models appear, or the UI reports that none are installed.</p></div></li><li><span>04</span><div><strong>Model Library opens</strong><p>Use it to discover and install a local model.</p></div></li></ol></section>
+<section class="doc-section"><h2>4. Install a model</h2><p>Use Model Library, or install directly with Ollama:</p><pre><code>ollama pull &lt;model:tag&gt;</code></pre><div class="callout warning"><strong>Hardware matters</strong><p>Download size is not the same as RAM or VRAM consumption. Choose a variant appropriate for your machine.</p></div></section>
+<section class="doc-section"><h2>5. Start chatting</h2><p>Select an installed model, optionally set a system prompt and temperature, enter a prompt and submit. The response streams from Ollama through FastAPI to the browser.</p></section>
+<nav class="doc-pager"><span></span><a href="using-chat.html"><small>NEXT</small>Using Chat →</a></nav>
+
+      </div>
+    </main>
+  </div>
+  <script src="js/docs.js"></script>
+</body>
+</html>

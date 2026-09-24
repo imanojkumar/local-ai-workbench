@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Develop Local AI Workbench with VS Code and Git.">
+  <meta name="theme-color" content="#0a0d14">
+  <title>Development · Local AI Workbench</title>
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+  <div class="noise"></div>
+  
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Local AI Workbench home">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<rect x="1" y="1" width="26" height="26" rx="8" fill="url(#g)" stroke="rgba(255,255,255,.18)"/>
+<path d="M8.2 18.2V9.8h3.2l2.6 4.2 2.6-4.2h3.2v8.4h-2.7v-4.4L14 18.6l-3.1-4.8v4.4H8.2Z" fill="white"/>
+<defs><linearGradient id="g" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6D7CFF"/><stop offset="1" stop-color="#00C7A5"/></linearGradient></defs>
+</svg>
+    <span>Local AI Workbench</span><span class="version">v1.1</span>
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <a class="active" href="getting-started.html">Docs</a>
+    <a class="" href="architecture.html">Architecture</a>
+    <a href="https://github.com/imanojkumar/local-ai-workbench" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+    <span class="theme-icon">◐</span>
+  </button>
+  <button class="menu-toggle" type="button" aria-label="Open navigation">☰</button>
+</header>
+  <div class="docs-layout">
+    
+<aside class="sidebar">
+  <div class="side-group">
+    <div class="side-label">Documentation</div>
+    <a class="side-link " href="getting-started.html">Getting Started</a>
+<a class="side-link " href="using-chat.html">Using Chat</a>
+<a class="side-link " href="model-library.html">Model Library</a>
+<a class="side-link " href="architecture.html">Architecture</a>
+<a class="side-link active" href="development.html">Development</a>
+<a class="side-link " href="limitations.html">Limitations</a>
+  </div>
+  <div class="side-card">
+    <div class="eyebrow">LOCAL-FIRST</div>
+    <strong>Run models on your machine.</strong>
+    <p>Vanilla JS → FastAPI → Ollama</p>
+  </div>
+</aside>
+    <main class="doc-main">
+      <div class="doc-wrap">
+        
+<div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Development</span></div>
+<header class="doc-hero"><span class="eyebrow">ENGINEERING</span><h1>Development Guide</h1><p>A disciplined VS Code, Python and Git workflow for extending the project.</p></header>
+<section class="doc-section"><h2>Open the repository</h2><pre><code>cd /d D:\Ollama_AI_Workbench
+code .</code></pre><p>Open the repository root as the VS Code workspace.</p></section>
+<section class="doc-section"><h2>Virtual environment</h2><pre><code>.venv\Scripts\activate
+python -m pip install -r requirements.txt</code></pre><p>Git commands do not require the virtual environment to be active.</p></section>
+<section class="doc-section"><h2>Recommended cycle</h2><div class="process wrap"><span>Edit</span><i>→</i><span>Run</span><i>→</i><span>Test</span><i>→</i><span>Review diff</span><i>→</i><span>Stage</span><i>→</i><span>Commit</span><i>→</i><span>Push</span></div></section>
+<section class="doc-section"><h2>Git essentials</h2><pre><code>git status
+git diff
+git add .
+git commit -m "Describe the change"
+git push</code></pre></section>
+<section class="doc-section"><h2>Protect the repository</h2><p>Do not commit <code>.venv</code>, <code>.env</code>, credentials, tokens, caches or downloaded model artifacts.</p><div class="callout warning"><strong>Review before every commit</strong><p>Use <code>git status</code> and <code>git diff --staged</code> before pushing.</p></div></section>
+<section class="doc-section"><h2>Version tags</h2><pre><code>git tag -a v1.1 -m "Local AI Workbench V1.1"
+git push origin v1.1</code></pre></section>
+<nav class="doc-pager"><a href="architecture.html"><small>PREVIOUS</small>← Architecture</a><a href="limitations.html"><small>NEXT</small>Limitations →</a></nav>
+
+      </div>
+    </main>
+  </div>
+  <script src="js/docs.js"></script>
+</body>
+</html>

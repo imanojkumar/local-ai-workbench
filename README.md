@@ -22,3 +22,20 @@ The pip upgrade notice is informational. V1.1 does not force pip upgrades on sta
 
 ## Notes
 Ollama does not expose the public website catalogue through the local Ollama API. V1.1 therefore reads public Ollama catalogue/model pages server-side on a best-effort basis. If Ollama changes its public HTML, search/detail parsing may require maintenance. The application never treats unknown-size variants as locally downloadable.
+
+## Documentation & Tutorials
+
+The complete Local AI Workbench tutorial and project documentation are available on GitHub Pages:
+
+**[Open the Local AI Workbench Tutorial →](https://imanojkumar.github.io/local-ai-workbench/)**
+
+The tutorial includes:
+
+- Getting Started
+- Using Chat
+- Model Library
+- Architecture
+- Development Guide
+- Current Limitations
+
+The source documentation is maintained in the [`docs/`](docs/) folder alongside the application code.

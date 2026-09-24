@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Architecture of Local AI Workbench.">
+  <meta name="theme-color" content="#0a0d14">
+  <title>Architecture · Local AI Workbench</title>
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+  <div class="noise"></div>
+  
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Local AI Workbench home">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<rect x="1" y="1" width="26" height="26" rx="8" fill="url(#g)" stroke="rgba(255,255,255,.18)"/>
+<path d="M8.2 18.2V9.8h3.2l2.6 4.2 2.6-4.2h3.2v8.4h-2.7v-4.4L14 18.6l-3.1-4.8v4.4H8.2Z" fill="white"/>
+<defs><linearGradient id="g" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6D7CFF"/><stop offset="1" stop-color="#00C7A5"/></linearGradient></defs>
+</svg>
+    <span>Local AI Workbench</span><span class="version">v1.1</span>
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <a class="" href="getting-started.html">Docs</a>
+    <a class="active" href="architecture.html">Architecture</a>
+    <a href="https://github.com/imanojkumar/local-ai-workbench" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+    <span class="theme-icon">◐</span>
+  </button>
+  <button class="menu-toggle" type="button" aria-label="Open navigation">☰</button>
+</header>
+  <div class="docs-layout">
+    
+<aside class="sidebar">
+  <div class="side-group">
+    <div class="side-label">Documentation</div>
+    <a class="side-link " href="getting-started.html">Getting Started</a>
+<a class="side-link " href="using-chat.html">Using Chat</a>
+<a class="side-link " href="model-library.html">Model Library</a>
+<a class="side-link active" href="architecture.html">Architecture</a>
+<a class="side-link " href="development.html">Development</a>
+<a class="side-link " href="limitations.html">Limitations</a>
+  </div>
+  <div class="side-card">
+    <div class="eyebrow">LOCAL-FIRST</div>
+    <strong>Run models on your machine.</strong>
+    <p>Vanilla JS → FastAPI → Ollama</p>
+  </div>
+</aside>
+    <main class="doc-main">
+      <div class="doc-wrap">
+        
+<div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Architecture</span></div>
+<header class="doc-hero"><span class="eyebrow">SYSTEM DESIGN</span><h1>Architecture</h1><p>A deliberately separated local AI stack that can grow without coupling the UI directly to the model runtime.</p></header>
+<section class="doc-section"><h2>High-level flow</h2><div class="arch-stack"><div><b>01</b><strong>Browser WebUI</strong><span>HTML5 · CSS3 · Vanilla JavaScript</span></div><em>↓</em><div><b>02</b><strong>FastAPI</strong><span>Application / API boundary</span></div><em>↓</em><div><b>03</b><strong>LLM / Ollama Services</strong><span>Chat · discovery · catalogue logic</span></div><em>↓</em><div><b>04</b><strong>Local Ollama</strong><span>tags · pull · chat generation</span></div><em>↓</em><div class="accent"><b>05</b><strong>Local model</strong><span>Your installed LLM</span></div></div></section>
+<section class="doc-section"><h2>Why FastAPI sits in the middle</h2><p>A direct browser-to-Ollama implementation would be simpler initially, but it would couple the UI to one runtime. FastAPI establishes a stable application boundary for future capabilities.</p><div class="cap-grid"><span>RAG</span><span>Tools</span><span>Agents</span><span>Persistence</span><span>Evaluation</span><span>Model routing</span></div></section>
+<section class="doc-section"><h2>Design principles</h2><ol class="principles"><li><b>Local-first</b><span>Local inference is the primary runtime.</span></li><li><b>Model-agnostic</b><span>No dependency on a single model family.</span></li><li><b>Separation of concerns</b><span>UI, API, services and runtime remain distinct.</span></li><li><b>Progressive extensibility</b><span>Add RAG, tools and agents incrementally.</span></li></ol></section>
+<nav class="doc-pager"><a href="model-library.html"><small>PREVIOUS</small>← Model Library</a><a href="development.html"><small>NEXT</small>Development →</a></nav>
+
+      </div>
+    </main>
+  </div>
+  <script src="js/docs.js"></script>
+</body>
+</html>
