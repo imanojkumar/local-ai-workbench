@@ -18,7 +18,7 @@
 <path d="M8.2 18.2V9.8h3.2l2.6 4.2 2.6-4.2h3.2v8.4h-2.7v-4.4L14 18.6l-3.1-4.8v4.4H8.2Z" fill="white"/>
 <defs><linearGradient id="g" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6D7CFF"/><stop offset="1" stop-color="#00C7A5"/></linearGradient></defs>
 </svg>
-    <span>Local AI Workbench</span><span class="version">v1.1</span>
+    <span>Local AI Workbench</span><span class="version">v1.2</span>
   </a>
   <nav class="topnav" aria-label="Primary">
     <a class="active" href="getting-started.html">Docs</a>
@@ -58,7 +58,8 @@
 <section class="doc-section"><h2>System prompt</h2><p>A system prompt provides high-level behavior guidance to the selected model.</p><pre><code>You are an LLM engineering tutor.
 Explain concepts clearly and use concise examples.</code></pre><div class="callout note"><strong>Instruction, not enforcement</strong><p>Model compliance varies. A system prompt is not a security boundary.</p></div></section>
 <section class="doc-section"><h2>Temperature</h2><div class="metric-row"><div><strong>Lower</strong><span>More deterministic</span></div><div><strong>Higher</strong><span>More variation</span></div><div><strong>Best value</strong><span>Task + model dependent</span></div></div></section>
-<section class="doc-section"><h2>Persistence</h2><p>V1.1 uses browser-oriented persistence for chat and UI state. There is no server-side conversation database yet.</p></section>
+<section class="doc-section"><h2>Conversation history &amp; projects</h2><p>V1.2 stores multiple conversations in browser-local storage and organizes them in the sidebar as <strong>Pinned</strong>, <strong>Projects</strong>, and <strong>Recent</strong>. Chats can be renamed, pinned or unpinned, moved between projects, or deleted. Projects can be created, renamed, collapsed, and deleted without deleting their chats.</p><div class="callout note"><strong>Browser-local workspace</strong><p>There is still no server-side conversation database or cross-device synchronization. Clearing browser site data can remove the saved workspace.</p></div></section>
+<section class="doc-section"><h2>Cold starts and timing</h2><p>The first request to a large local model can take noticeably longer while Ollama loads weights into RAM and/or GPU VRAM. The composer reports <strong>Preparing model</strong>, <strong>Processing prompt</strong>, <strong>Generating response</strong>, client-observed time to first token (TTFT), and total elapsed time. Warm follow-up prompts are often faster.</p></section>
 <nav class="doc-pager"><a href="getting-started.html"><small>PREVIOUS</small>← Getting Started</a><a href="model-library.html"><small>NEXT</small>Model Library →</a></nav>
 
       </div>

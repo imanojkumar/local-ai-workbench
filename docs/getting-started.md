@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide walks through installing and running **Local AI Workbench V1.1** on Windows.
+This guide walks through installing and running **Local AI Workbench V1.2** on Windows.
 
 ## Prerequisites
 
@@ -54,3 +54,10 @@ ollama pull <model:tag>
 ## Start chatting
 
 Select an installed model, optionally configure the system prompt and temperature, enter a prompt, and submit it. Responses stream through FastAPI from the local Ollama runtime.
+
+
+## Chat history and first-response latency
+
+V1.2 keeps separate saved conversations in the browser and organizes them under **Pinned**, **Projects**, and **Recent** in the left sidebar. Existing V1.1 single-chat history is migrated automatically on first load.
+
+The first prompt after loading a large local model may take noticeably longer than later prompts. This is typically cold-start/model-loading latency: Ollama may need to load model weights into system RAM and/or GPU VRAM before it can generate the first token. The chat composer reports lifecycle state, elapsed time, and time to first token so a slow local load is easier to distinguish from a failed request.

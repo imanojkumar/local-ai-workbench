@@ -18,7 +18,7 @@
 <path d="M8.2 18.2V9.8h3.2l2.6 4.2 2.6-4.2h3.2v8.4h-2.7v-4.4L14 18.6l-3.1-4.8v4.4H8.2Z" fill="white"/>
 <defs><linearGradient id="g" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6D7CFF"/><stop offset="1" stop-color="#00C7A5"/></linearGradient></defs>
 </svg>
-    <span>Local AI Workbench</span><span class="version">v1.1</span>
+    <span>Local AI Workbench</span><span class="version">v1.2</span>
   </a>
   <nav class="topnav" aria-label="Primary">
     <a class="active" href="getting-started.html">Docs</a>
@@ -56,9 +56,9 @@
 <section class="doc-section"><h2>Discovery workflow</h2><div class="process"><span>Search</span><i>→</i><span>Inspect family</span><i>→</i><span>Compare variants</span><i>→</i><span>Install locally</span><i>→</i><span>Chat</span></div></section>
 <section class="doc-section"><h2>Search</h2><p>Search by model family, for example:</p><div class="tag-row"><span>gpt-oss</span><span>qwen</span><span>gemma</span><span>llama</span><span>deepseek</span></div></section>
 <section class="doc-section"><h2>Variant discovery</h2><p>Variants can differ in parameter count, quantization, artifact size, context window, input type and local/cloud availability.</p><div class="callout note"><strong>Choose by workload, not popularity</strong><p>Download counts are useful discovery metadata, not a quality score.</p></div></section>
-<section class="doc-section"><h2>Local-only filtering</h2><p>V1.1 is designed around local Ollama inference. It filters detected cloud-only or non-downloadable variants when local-only filtering is enabled.</p></section>
+<section class="doc-section"><h2>Local-only filtering</h2><p>V1.2 is designed around local Ollama inference. It filters detected cloud-only or non-downloadable variants when local-only filtering is enabled.</p></section>
 <section class="doc-section"><h2>Install through Ollama</h2><p>The installation request remains local:</p><div class="process compact"><span>WebUI</span><i>→</i><span>FastAPI</span><i>→</i><span>Ollama service</span><i>→</i><span>/api/pull</span></div><p>Installed-state detection uses the local <code>/api/tags</code> endpoint.</p></section>
-<section class="doc-section"><h2>Catalogue limitation</h2><p>The local Ollama API does not expose the complete public website catalogue. V1.1 therefore performs best-effort catalogue discovery from public information, which may require maintenance if upstream page structures change.</p></section>
+<section class="doc-section"><h2>Catalogue limitation</h2><p>The local Ollama API does not expose the complete public website catalogue. V1.2 therefore performs best-effort catalogue discovery from public information, which may require maintenance if upstream page structures change.</p></section>
 <nav class="doc-pager"><a href="using-chat.html"><small>PREVIOUS</small>← Using Chat</a><a href="architecture.html"><small>NEXT</small>Architecture →</a></nav>
 
       </div>

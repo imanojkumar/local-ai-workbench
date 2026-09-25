@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Current limitations of Local AI Workbench V1.1.">
+  <meta name="description" content="Current limitations of Local AI Workbench V1.2.">
   <meta name="theme-color" content="#0a0d14">
   <title>Limitations · Local AI Workbench</title>
   <link rel="stylesheet" href="css/docs.css">
@@ -18,7 +18,7 @@
 <path d="M8.2 18.2V9.8h3.2l2.6 4.2 2.6-4.2h3.2v8.4h-2.7v-4.4L14 18.6l-3.1-4.8v4.4H8.2Z" fill="white"/>
 <defs><linearGradient id="g" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6D7CFF"/><stop offset="1" stop-color="#00C7A5"/></linearGradient></defs>
 </svg>
-    <span>Local AI Workbench</span><span class="version">v1.1</span>
+    <span>Local AI Workbench</span><span class="version">v1.2</span>
   </a>
   <nav class="topnav" aria-label="Primary">
     <a class="active" href="getting-started.html">Docs</a>
@@ -52,7 +52,7 @@
       <div class="doc-wrap">
         
 <div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Limitations</span></div>
-<header class="doc-hero"><span class="eyebrow">V1.1 BOUNDARIES</span><h1>Limitations</h1><p>What the current release deliberately does not claim to be.</p></header>
+<header class="doc-hero"><span class="eyebrow">V1.2 BOUNDARIES</span><h1>Limitations</h1><p>What the current release deliberately does not claim to be.</p></header>
 <section class="doc-section"><h2>Current boundaries</h2>
 <div class="limit-grid">
 <div><span>01</span><h3>Local / single-user</h3><p>No multi-user accounts, authentication or tenant isolation.</p></div>
@@ -64,7 +64,9 @@
 </div></section>
 <section class="doc-section"><h2>Security</h2><div class="callout danger"><strong>Do not expose the development server directly to the internet.</strong><p>A public deployment would require authentication, TLS/reverse proxy configuration, validation, rate limiting, logging and security review.</p></div></section>
 <section class="doc-section"><h2>Model output</h2><p>Local models can hallucinate, generate insecure code or misunderstand instructions. Validate important outputs independently.</p></section>
-<section class="doc-section"><h2>Roadmap ≠ delivered functionality</h2><p>RAG, agents, tools, evaluation, alternative providers and fine-tuning are future directions. They should not be represented as V1.1 features.</p></section>
+<section class="doc-section"><h2>Browser-local conversation history</h2><p>Multiple chats, pins and project grouping are stored in the current browser. V1.2 does not provide a multi-user database, synchronization across devices/browsers, or cloud backup. Clearing site data can remove local history.</p></section>
+<section class="doc-section"><h2>Local inference latency</h2><p>Response speed depends on model size and hardware. Long time-to-first-token can occur during cold model loads. V1.2 timing is client-observed and does not yet expose Ollama's exact internal load/evaluation telemetry.</p></section>
+<section class="doc-section"><h2>Roadmap ≠ delivered functionality</h2><p>RAG, agents, tools, evaluation, alternative providers and fine-tuning are future directions. They should not be represented as V1.2 features.</p></section>
 <nav class="doc-pager"><a href="development.html"><small>PREVIOUS</small>← Development</a><span></span></nav>
 
       </div>

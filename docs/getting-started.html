@@ -18,7 +18,7 @@
 <path d="M8.2 18.2V9.8h3.2l2.6 4.2 2.6-4.2h3.2v8.4h-2.7v-4.4L14 18.6l-3.1-4.8v4.4H8.2Z" fill="white"/>
 <defs><linearGradient id="g" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6D7CFF"/><stop offset="1" stop-color="#00C7A5"/></linearGradient></defs>
 </svg>
-    <span>Local AI Workbench</span><span class="version">v1.1</span>
+    <span>Local AI Workbench</span><span class="version">v1.2</span>
   </a>
   <nav class="topnav" aria-label="Primary">
     <a class="active" href="getting-started.html">Docs</a>
@@ -53,7 +53,7 @@
         
 <div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Getting Started</span></div>
 <header class="doc-hero"><span class="eyebrow">GUIDE 01</span><h1>Getting Started</h1><p>From a clean Windows machine to your first local model conversation.</p></header>
-<div class="doc-meta"><span>Estimated setup: 10–20 min</span><span>V1.1</span></div>
+<div class="doc-meta"><span>Estimated setup: 10–20 min</span><span>V1.2</span></div>
 <section class="doc-section"><h2>Prerequisites</h2><p>Install these components before launching the workbench.</p>
 <div class="check-grid"><div>Windows 10/11</div><div>Python 3.10+</div><div>Ollama</div><div>Modern browser</div><div>Git</div><div>VS Code</div></div></section>
 <section class="doc-section"><h2>1. Verify Ollama</h2><p>Open Command Prompt or PowerShell and confirm the runtime is available.</p>
@@ -64,7 +64,7 @@ ollama list</code></pre>
 <section class="doc-section"><h2>3. Validate the first run</h2>
 <ol class="steps"><li><span>01</span><div><strong>WebUI loads</strong><p>The application shell should render without browser errors.</p></div></li><li><span>02</span><div><strong>Ollama connected</strong><p>The status indicator should confirm the local runtime is reachable.</p></div></li><li><span>03</span><div><strong>Model selector is ready</strong><p>Installed models appear, or the UI reports that none are installed.</p></div></li><li><span>04</span><div><strong>Model Library opens</strong><p>Use it to discover and install a local model.</p></div></li></ol></section>
 <section class="doc-section"><h2>4. Install a model</h2><p>Use Model Library, or install directly with Ollama:</p><pre><code>ollama pull &lt;model:tag&gt;</code></pre><div class="callout warning"><strong>Hardware matters</strong><p>Download size is not the same as RAM or VRAM consumption. Choose a variant appropriate for your machine.</p></div></section>
-<section class="doc-section"><h2>5. Start chatting</h2><p>Select an installed model, optionally set a system prompt and temperature, enter a prompt and submit. The response streams from Ollama through FastAPI to the browser.</p></section>
+<section class="doc-section"><h2>5. Start chatting</h2><p>Select an installed model, optionally set a system prompt and temperature, enter a prompt and submit. The response streams from Ollama through FastAPI to the browser.</p><p>V1.2 saves separate conversations in the browser and organizes them under <strong>Pinned</strong>, <strong>Projects</strong>, and <strong>Recent</strong>. Existing V1.1 single-chat history is migrated automatically on first load.</p><div class="callout note"><strong>First response may be slower</strong><p>A large model can have cold-start/model-loading latency while Ollama loads weights into RAM and/or GPU VRAM. The composer shows elapsed time and time to first token so a slow load is easier to distinguish from a failed request.</p></div></section>
 <nav class="doc-pager"><span></span><a href="using-chat.html"><small>NEXT</small>Using Chat →</a></nav>
 
       </div>
