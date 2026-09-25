@@ -7,7 +7,7 @@ from .services import ollama_service as ollama
 from .services.catalog_service import search_models, model_detail
 
 ROOT=Path(__file__).resolve().parents[1]
-app=FastAPI(title="Local AI Workbench", version="1.1.0")
+app=FastAPI(title="Local AI Workbench", version="1.2.0")
 app.mount("/static", StaticFiles(directory=ROOT/"frontend"), name="static")
 
 class ChatIn(BaseModel):
@@ -17,7 +17,7 @@ class PullIn(BaseModel): name:str
 @app.get("/")
 async def home(): return FileResponse(ROOT/"frontend/index.html")
 @app.get("/api/health")
-async def health(): return {"app":True,"version":"1.1.0","ollama":await ollama.health()}
+async def health(): return {"app":True,"version":"1.2.0","ollama":await ollama.health()}
 @app.get("/api/models")
 async def get_models():
     try:return {"models":await ollama.models()}

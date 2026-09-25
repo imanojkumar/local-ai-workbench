@@ -20,4 +20,4 @@ Download through local Ollama
 Model becomes available in Chat
 ```
 
-V1.1 performs best-effort public catalogue discovery and uses local Ollama APIs for installed-state detection and model pulls.
+V1.2 performs best-effort public catalogue discovery and uses local Ollama APIs for installed-state detection and model pulls.

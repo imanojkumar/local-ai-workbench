@@ -15,7 +15,7 @@ Install Local AI Workbench, verify Ollama and run your first local model.
 [Getting Started →](getting-started.md)
 
 ### 💬 Using Chat
-Learn how to select models, configure the system prompt and use streaming chat.
+Use streaming chat with safe Markdown, lifecycle timing, saved history, pinned chats and projects.
 
 [Using Chat →](using-chat.md)
 
@@ -35,7 +35,7 @@ Set up VS Code, Python, Git and the development workflow.
 [Development Guide →](development.md)
 
 ### ⚠️ Limitations
-Understand the current V1.1 boundaries, security considerations and hardware limitations.
+Understand the current V1.2 boundaries, security considerations and hardware limitations.
 
 [Current Limitations →](limitations.md)
 
